@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Force recompile
+echo "Compiling..."
+rm -f hmc
+g++ -O3 *.cpp -o hmc -llapack -lblas
+
+echo "3		0       1	1       1    0.0002  0       41" > input 
+echo "SWEEPS  THERM   GAP	SAVE	NUMBEROFSTEPS       DT     READIN  SEED" >> input
+
+# Run
+echo "Running..."
+ts=$(date +%s%N)
+./hmc &> test.out
+t=$((($(date +%s%N) - $ts)/1000000))
+echo -e "\nRuntime: $t msec" >> test.out
+
+rm -r data config hmc_test lines

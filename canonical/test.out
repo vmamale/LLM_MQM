@@ -1,0 +1,116 @@
+One Dimensional reduction of 4D Yang-Mills
+--------------------------------
+Number of colors     3
+Temporal extent      20
+Spatial links/site   3
+Lattice Spacing   0.01
+Physical temperature  5
+Therm sweeps         0
+Measurement sweeps   3
+Gap                  1
+Save                  1
+Time step DT         0.0002
+Trajectory length    0.0002
+Number of steps    1
+Read initial config  0
+--------------------------------
+Computing generators for SU(N)
+Got seed 41 from user input
+Warming up
+Thermalization DT 0.0001
+Measurement DT 0.0002
+Commencing measurement sweeps
+REJECTED
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00467826
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0539363
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000312408
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000160567
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00209984
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.227203
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0113092
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0191443
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000157964
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0277895
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000173858
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000157777
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00019525
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0299723
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000191664
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00754508
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00194147
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000314655
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0106714
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000121861
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0013374
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00011678
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00673973
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00018165
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0197461
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00601934
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0204136
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00904268
+U field not unitary - 1/NTr(U*Adj(U))-1 is 1.34359e-05
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00210506
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000185395
+U field not unitary - 1/NTr(U*Adj(U))-1 is 3.96168e-05
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00311895
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00306641
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00019057
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0199044
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000118949
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000362389
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000117668
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000770744
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00419179
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0279572
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0431692
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0323973
+U field not unitary - 1/NTr(U*Adj(U))-1 is 8.97127e-05
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0120549
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00030716
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00155253
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0160906
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00185463
+U field not unitary - 1/NTr(U*Adj(U))-1 is 8.2047e-05
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0135087
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000171446
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0111651
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000176124
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0029376
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000417772
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00211964
+U field not unitary - 1/NTr(U*Adj(U))-1 is 7.57448e-05
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000595428
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000200184
+U field not unitary - 1/NTr(U*Adj(U))-1 is 5.91273e-05
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00562481
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.398656
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00016868
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.00619306
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000179029
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0207634
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0213783
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0212025
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000101411
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000194904
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.0719698
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000121261
+U field not unitary - 1/NTr(U*Adj(U))-1 is 7.84775e-05
+U field not unitary - 1/NTr(U*Adj(U))-1 is 7.77109e-05
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.15632
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000681169
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000880309
+U field not unitary - 1/NTr(U*Adj(U))-1 is 0.000357564
+Action/(Nc^2*Nt)	143.583
+RE(PLAQ_AVG)	0.042782
+POLY	-0.0767728	0.163299
+REJECTED
+Action/(Nc^2*Nt)	143.583
+RE(PLAQ_AVG)	0.042782
+POLY	-0.0767728	0.163299
+REJECTED
+Action/(Nc^2*Nt)	143.583
+RE(PLAQ_AVG)	0.042782
+POLY	-0.0767728	0.163299
+
+Runtime: 6 msec

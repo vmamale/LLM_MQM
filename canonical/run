@@ -1,0 +1,86 @@
+#!/bin/bash
+
+if [ $# -lt 3 ]; then
+  echo "Usage: $0 <start> <end> <per_job>"
+  exit 1
+fi
+
+# Input parameters
+first=$1
+last=$2
+batch=$3
+
+if [ $last -le $first ]; then
+  echo "ERROR: <end> ($last) must be greater than <start> ($first)"
+  exit 1
+fi
+sweeps=$(( last - first ))   # number of sweeps to run in this job
+
+therm=0
+steps=2
+gap=10
+step_size=0.0006
+iread=1
+iseed=41
+
+# bin should give path to the executable
+#bin=..
+if [ $first -gt 0 ]; then
+  lat=Configs/config.$first
+  if [ ! -f $lat ]; then
+    echo "ERROR: LATTICE $lat NOT FOUND, SUBMISSION ABORTED"
+    exit 1
+  fi
+  iread=1
+  cp $lat config
+fi
+
+for(( i=$first ; $i<$last ; i+=$batch )); do
+  next=$[$i + $batch]
+  out=Out/out.$i-$next
+  lat=Configs/config.$next
+  if [ -f $out ]; then
+    echo "ERROR: OUTPUT FILE $out EXISTS, SUBMISSION ABORTED"
+    rm -f temp
+    exit 1
+  fi
+  if [ -f $lat ]; then
+    echo "ERROR: LATTICE $lat EXISTS, SUBMISSION ABORTED"
+    rm -f temp
+    exit 1
+  fi
+done
+
+for(( i=$first ; $i<$last ; i+=$batch )); do
+  next=$[$i + $batch]
+  out=Out/out.$i-$next
+  lat=Configs/config.$next
+echo "$i ,$next "
+
+if [ $i -gt 0 ]; then
+  lat=Configs/config.$i
+  if [ ! -f $lat ]; then
+    echo "ERROR: LATTICE $lat NOT FOUND, SUBMISSION ABORTED"
+    exit 1
+  fi
+  iread=1
+  cp $lat config
+fi
+
+
+echo "$batch	$therm	$gap	$batch	$steps	$step_size  	$iread	$iseed" > input
+echo "SWEEPS  THERM   GAP	SAVE	NUMBEROFSTEPS       DT     READIN  SEED" >> input
+
+# Run
+echo "Running $batch sweeps ($i -> $next)..."
+ts=$(date +%s%N)
+#./$bin/hmc &> Out/out.$first-$last
+./hmc &> Out/out.$i-$next
+t=$((($(date +%s%N) - $ts)/1000000))
+echo -e "\nRuntime: $t msec" >> Out/out.$i-$next
+
+mv config Configs/config.$next
+
+rm -r  hmc_test lines input
+
+done

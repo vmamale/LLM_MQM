@@ -1,0 +1,59 @@
+#!/bin/bash
+
+#if [ $# -lt 1 ]; then
+  echo "Usage: $0 <first> <skip> [last (optional)]"
+#  exit 1
+#fi
+# Give skip 0 if last is not provided i.e., data from a single file is extracted  
+
+
+# Input parameters
+first=$1
+if [ $# -gt 2 ]; then
+  last=$3
+  time=00:05:00
+else
+  last=$1
+  time=00:01:00
+fi
+skip=$2
+
+
+dir=`pwd`
+cd $dir
+
+# Parameters fixed by the path
+temp=`pwd`
+
+
+# Output files in numeric order of the start value (0-500, 500-1000, ...)
+files=$(ls Out/out.*-* | sort -t. -k2,2n)
+
+# Check that the ranges chain together: each file must start where the previous one ended
+prev=0
+ok=1
+for f in $files; do
+  range=${f##*out.}      # e.g. 500-1000
+  s=${range%-*}          # start: 500
+  e=${range#*-}          # end: 1000
+  if [ "$s" -ne "$prev" ]; then
+    echo "WARNING: $f starts at $s but the previous file ended at $prev"
+    ok=0
+  fi
+  prev=$e
+done
+[ $ok -eq 1 ] && echo "Ranges are contiguous: 0 to $prev"
+
+
+awk '
+  $3=="deltaH" { print $4            > "data/deltaH" }
+  $1=="RE(PLAQ_AVG)" { print $2            > "data/plaq" }
+  $1=="Action/(Nc^2*Nt)" { print $2            > "data/action" }
+  $1=="POLY"             { print $2 "     " $3 > "data/poly"   }
+' $files
+		
+
+
+
+
+echo "Completed analysing out files with $iter measurements ($first--$last by $skip)"
